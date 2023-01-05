@@ -34,4 +34,9 @@ $app->add(function ($request, $handler) {
             ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
 });
 
-$app->run();
+try {
+    $app->run();     
+} catch (Exception $e) {    
+  // We display a error message
+  die( json_encode(array("status" => "failed", "message" => "This action is not allowed"))); 
+}

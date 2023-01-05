@@ -11,7 +11,7 @@ require __DIR__ . '/../../vendor/autoload.php';
 $aux = new \DI\Container();
 AppFactory::setContainer($aux);
 $app = AppFactory::create();
-$app->setBasePath("https://plataformavanessaarenas.com/api/public");
+//$app->setBasePath("https://plataformavanessaarenas.com/api/public");
 $container = $app->getContainer();
 
 require __DIR__ . "/Configs.php";
